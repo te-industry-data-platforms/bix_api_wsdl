@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by Vaclav Snasel (Logica Czech Republic s.r.o.) -->
+<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by user user (SEMA) -->
+<!-- edited with XML Spy v4.4 (http://www.xmlspy.com) by Michael Conroy (SEMA) -->
+<xsd:schema xmlns:ecl="code-lists.xsd" xmlns:cdscl="code-lists-cds.xsd" xmlns:cdscc="core-cmpts-cds.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="core-cmpts-cds.xsd" elementFormDefault="qualified">
+	<xsd:import namespace="code-lists-cds.xsd" schemaLocation="code-lists-cds.xsd"/>
+	<xsd:import namespace="code-lists.xsd" schemaLocation="code-lists.xsd"/>
+	<!--_________________________________________________-->
+	<!--                           CDS CORE COMPONENTS                  -->
+	<!--_________________________________________________-->
+	<xsd:annotation>
+		<xsd:documentation>
+			<Titre> List of CDS Core Components used in the implemantation of EDIGAS XML Messages within CDS system of OTE (Czech energy market operator)</Titre>
+			<Version>Current Version: N/A</Version>
+			<Release>Current Release: N/A</Release>
+		</xsd:documentation>
+	</xsd:annotation>
+	<xsd:complexType name="ApplicationErrorType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<Uid>051</Uid>
+				<Definition>defines a Description format </Definition>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="v" type="cdscl:CLCDS051TypeList" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="BusinessType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<Uid>021</Uid>
+				<Definition>defines a business status</Definition>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="v" type="cdscl:CLCDS021TypeList" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="DescriptionCodeType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<Uid>002</Uid>
+				<Definition>A code uniquely identifying a given description</Definition>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="v" use="required">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="35"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="codingScheme" type="cdscl:CLCDS002TypeList" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="FunctionType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<Uid>050</Uid>
+				<Definition>Indicates the function of a message</Definition>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="v" type="cdscl:CLCDS050TypeList" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="ImbnotTypeType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<Uid>025</Uid>
+				<Definition>Indicates type of imbalance</Definition>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="v" type="cdscl:CLCDS025TypeList" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="ItemTypeType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<Uid>022</Uid>
+				<Definition>defines a item type description </Definition>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="v" type="cdscl:CLCDS022TypeList" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="MeasurementPointType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<Uid>002</Uid>
+				<Definition>The identification of a point where gas throughput is measured.</Definition>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="v" use="required">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="16"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="codingScheme" type="cdscl:CLCDS002TypeList" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="MeasurementTypeType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<Uid>023</Uid>
+				<Definition>A domain covering a number of related objects, such as metering point and accounting point, etc.</Definition>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="v" type="cdscl:CLCDS023TypeList" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="MessageType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<Uid>001 </Uid>
+				<Definition> (Synonym "Document Type") The coded type of a document. The document type describes the principal characteristic of a document</Definition>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="v" type="cdscl:CDSCL001TypeList" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="NominationSubTypeType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<Uid>020</Uid>
+				<Definition>Indicates type or tubtype of nomination</Definition>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="v" type="cdscl:CLCDS020TypeList" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="PartyType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<Uid>002</Uid>
+				<Definition>The identification of an actor in the Energy market.</Definition>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="v" use="required">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="16"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="codingScheme" type="cdscl:CLCDS002TypeList" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="ProductType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<Uid>024</Uid>
+				<Definition>Indicates product</Definition>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="v" type="cdscl:CLCDS024TypeList" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="QuantityTypeType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<Uid>011</Uid>
+				<Definition>Indicates the type of quantity.</Definition>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="v" type="cdscl:CLCDS011TypeList" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="ReferenceType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<Uid>010</Uid>
+				<Definition>Indicates the type of reference.</Definition>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="v" type="cdscl:CLCDS010TypeList" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="RoleType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<Uid>003</Uid>
+				<Definition>Identification of the role played by a party. </Definition>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="v" type="cdscl:CLCDS003TypeList" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="StatusCategoryType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<Uid>014</Uid>
+				<Definition>Indicates the quantity cvategory.</Definition>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="v" type="cdscl:CLCDS014TypeList" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="StatusType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<Uid>013</Uid>
+				<Definition>The condition or position of an object with regard to its standing.</Definition>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="v" type="cdscl:CLCDS013TypeList" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="UnitOfMeasureType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<Uid>012</Uid>
+				<Definition>(synonym MeasurementUnit) The unit of measure that is applied to a quantity. The measurement units shall be in compliance with UN/ECE Recommendation 20.</Definition>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="v" type="cdscl:CLCDS012TypeList" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="MeasurementReasonType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<Uid>X04</Uid>
+				<Definition>Důvod odečtu</Definition>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="v" type="cdscl:CLCDS034TypeList" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="TimeIntervalType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<Uid>X01</Uid>
+				<Definition>The start date and time and the end date and time of an event. The time interval must be expressed in a form respecting ISO 8601 : YYYY-MM-DDTHH:MM(+/-HH:MM)/YYYY-MM-DDTHH:MM(+/-HH:MM).ISO 8601 rules for reduction may apply. The time can be expressed in local timezone.</Definition>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="v" use="required">
+			<xsd:annotation>
+				<xsd:documentation>
+ 			ISO 8601 time intervals are expressed in the form 
+			yyyy-mm-ddThh:mm(+/-hh:mm)/yyyy-mm-ddThh:mm(+/-hh:mm)
+			Note: The minimum XML form of dateTime is yyyy-mm-ddThh:mm:ss
+				</xsd:documentation>
+			</xsd:annotation>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:pattern value="[0-9][0-9][0-9][0-9][\-][0-1][0-9][\-][0-3][0-9][T][0-2][0-9][:][0-6][0-9]([+-][0-2][0-9][:][0-6][0-9])?[/][0-9][0-9][0-9][0-9][\-][0-1][0-9][\-][0-3][0-9][T][0-2][0-9][:][0-6][0-9]([+-][0-2][0-9][:][0-6][0-9])?"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType name="VersionType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<Uid>026</Uid>
+				<Definition>A code that distinguishes one evolution of an identified object from another. Information about a specific object may be sent several times, each transmission being identified by a different version number.</Definition>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="v" use="required">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:integer">
+					<xsd:minInclusive value="0"/>
+					<xsd:maxInclusive value="999"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:complexType name="AuthorizationType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<Uid>X02</Uid>
+				<Definition>Indicates authorized nomination type</Definition>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="v" type="cdscl:CLCDS027TypeList" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="BalanceActionStatusType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<Uid>X03</Uid>
+				<Definition>Povaha vyrovnávací akce</Definition>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="v" type="cdscl:CLCDS028TypeList" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="ProductTypeType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<Uid>X03</Uid>
+				<Definition>Produkt</Definition>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="v" type="cdscl:CLCDS031TypeList" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="MarketTypeType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<Uid>X03</Uid>
+				<Definition>Typ trhu</Definition>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="v" type="cdscl:CLCDS029TypeList" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="BalanceActionReasonType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<Uid>X03</Uid>
+				<Definition>Důvod provedení vyrovnávací akce</Definition>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="v" type="cdscl:CLCDS033TypeList" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="TextType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<Uid>002</Uid>
+				<Definition>The identification of a point where gas throughput is measured.</Definition>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:attribute name="language" type="cdscl:CLCDS032TypeList" use="required"/>
+		<xsd:attribute name="text" use="required">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:maxLength value="256"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+</xsd:schema>
