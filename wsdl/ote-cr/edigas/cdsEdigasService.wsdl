@@ -1538,7 +1538,7 @@ If the tag is not present, single-shot answer is expected. If it's present, attr
   </wsdl:binding>
   <wsdl:service name="CDSEdigasService">
     <wsdl:port binding="sch0:CDSEdigasServiceSoap11" name="CDSEdigasServiceSoap11">
-      <soap:address location="https://{HOST}:{PORT}/KSX/cdsEdigasService"/>
+      <soap:address location="https://lbbackend"/>
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>
