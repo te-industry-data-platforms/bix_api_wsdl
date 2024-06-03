@@ -1,9 +1,22 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: initial CI
 
 # Controls when the workflow will run
 on:
+  workflow_dispatch:
+    inputs:
+      env:
+        type: choice
+        description: 'Choose environment'
+        default: dev 
+        required: true
+        options:
+        - dev
+        - test
+        - qa
+        - prod
+        
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
     branches: [ "main" ]
@@ -27,7 +40,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo Hello, world!
+        run: echo Hello, world! env=${{github.event.inputs.env}}
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
