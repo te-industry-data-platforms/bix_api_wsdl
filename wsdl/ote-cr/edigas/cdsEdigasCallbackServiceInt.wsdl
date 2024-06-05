@@ -1514,7 +1514,7 @@
   </wsdl:binding>
   <wsdl:service name="CDSEdigasCallbackService">
     <wsdl:port binding="sch0:CdsEdigasCallbackSoap11" name="CdsEdigasCallbackSoap11">
-      <soap:address location="https://lbbackend/common/ote-cr/KSX/cdsEdigasCallbackService"/>
+      <soap:address location="https://lbbackend/eix/ote-cr/KSX/cdsEdigasCallbackService"/>
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>
